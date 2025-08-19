@@ -21,8 +21,8 @@ Check ``.github/workflows/*.yml`` to make see if we are using
 github versions (of mathics-core) for testing. If so adjust.
 
 
-Create a new Mathics Django release branch
-==========================================
+Create a new Mathics3 Django release branch
+===========================================
 
 .. code::
 
@@ -44,15 +44,15 @@ Update ``CHANGES.rst`` from ``ChangeLog``
     $ git commit --amend .
     $ git push -u origin HEAD # get CI testing going early
 
-Check Python versions
-======================
+Check Mathics3 Django on other Python versions
+==============================================
 
 .. code::
 
    $ ./admin-tools/check-versions.sh
 
-Merge release
-=============
+Merge Mathics3 Django release
+==============================
 
 Go to github and merge release into master.
 
@@ -64,7 +64,7 @@ Then...
     $ git pull
 
 
-Check Mathics-Django package from github
+Check Mathics3 Django package from github
 =========================================
 
 TODO: turn this into a script in ``admin-tools``
@@ -79,8 +79,8 @@ TODO: turn this into a script in ``admin-tools``
     $ pip uninstall ${PACKAGE}
     $ popd
 
-Make packages and check
-=======================
+Make Mathics3 Django packages and check
+=======================================
 
 ::
 
@@ -89,8 +89,8 @@ Make packages and check
 
 Go over what is in dist and remove unnecessary files in ``dist``.
 
-Release on Github
-=================
+Release Mathics3 Django on Github
+=================================
 
 Go to https://github.com/Mathics3/mathics-django/releases/new
 

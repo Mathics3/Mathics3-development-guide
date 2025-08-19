@@ -8,7 +8,7 @@ The following text and the code behind it was largely written by Angus
 Griffith. It also appears in the code in markdown format in the module
 ``mathics.code.parser``.
 
-The Mathics parser is an operator precedence parser that implements the
+The Mathics3 parser is an operator precedence parser that implements the
 precedence climbing method. The AST (Abstract Syntax Tree) produced
 after parsing is a kind of
 `M-expression <https://en.wikipedia.org/wiki/M-expression>`__ which is
@@ -226,7 +226,7 @@ Mathics3 implementation
 Precedence Climbing Operators
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All the Mathics operators are specified in
+All the Mathics3 operators are specified in
 ``mathics/core/parser/operators.py``. The precedence climbing algorithm
 is implemented in ``mathics/core/parser/parser.py``. All the special
 cases are implemented as additional rules.

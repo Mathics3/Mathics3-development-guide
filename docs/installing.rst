@@ -13,7 +13,7 @@ Mathics3 (mathics-core) Requirements
 
 The Mathics3 suite runs on Python 3.10 or later.
 
-Underneath, Mathics3 core relies on
+Underneath, Mathics3 Kernel relies on
 `SymPy <https://www.sympy.org/en/index.html>`__ which relies on
 `NumPy <https://numpy.org>`__. These and the other requirements will be
 installed automatically if you use the standard Python installer

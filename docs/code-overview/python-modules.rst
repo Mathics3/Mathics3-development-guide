@@ -132,7 +132,7 @@ threejs, and plain text.  We hope and expect other formatting to other
 kinds backend renderers like matplotlib, can be done by following the
 pattern used here.
 
-These routines typically get called in formatting Mathics Box objects.
+These routines typically get called in formatting Mathics3 Box objects.
 
 The higher level _Forms_ (e.g. ``TeXForm``, ``MathMLForm``) typically cause
 specific formatters to get called, (e.g. latex, mathml). However, the

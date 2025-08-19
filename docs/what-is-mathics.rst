@@ -52,7 +52,7 @@ make up the Mathics3 suite.
 Mathics3 Core
 -------------
 
-The Mathics3 core contains a parser, an evaluator, and
+The Mathics3 Kernel contains a parser, an evaluator, and
 some formatting routines.
 
 Over time, formatting routines may be packaged separately.
@@ -60,7 +60,7 @@ Over time, formatting routines may be packaged separately.
 There is also a very rudimentary command-line shell called ``mathics``.
 
 
-The Mathics3 core is required for any work with Mathics3.
+The Mathics3 Kernel is required for any work with Mathics3.
 
 If you are developing a non-interactive application written in
 Mathics3, you may no more than this.
@@ -71,7 +71,7 @@ image <https://hub.docker.com/r/mathicsorg/mathics>`_ , and
 extractable from the that, should you want to build your PDF,
 you'll need to have various TeX packages installed.
 
-Front ends Mathics-Django and mathicsscript use Mathics core.
+Front ends Mathics-Django and mathicsscript use the Mathics Kernel.
 
 Mathics3 Character Tables and Tokenizer
 ---------------------------------------
@@ -151,12 +151,12 @@ function.
 Determining when Something should be a Mathics3 Module
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Here are some reasons you would put something inside a Mathics3 Module instead of inside the Mathics3 core:
+Here are some reasons you would put something inside a Mathics3 Module instead of inside the Mathics3 Kernel:
 
 * If what you are doing requires a dependency on an OS library. NLP
   functions are like this. Putting NLP functions in a Mathics3 Module,
-  reduces the dependencies of Mathics3 core and therefore makes it easier
-  to install Mathics3 core and allow it to be available across more
+  reduces the dependencies of Mathics3 Kernel and therefore makes it easier
+  to install Mathics3 Kernel and allow it to be available across more
   environments than if it had a lot of OS dependencies required.
 * If the feature is implemented using a package that can be thought of
   as one of alternative possibilities. For example, matplotlib
@@ -170,7 +170,7 @@ Here are some reasons you would put something inside a Mathics3 Module instead o
   debugger also doesn't follow Wolfram Language behavior, so that is
   also a Mathics3 Module.
 
-If the thing you want to add is listed as a Wolfram Language Builtin Function, then it goes in Mathics core.
+If the thing you want to add is listed as a Wolfram Language Builtin Function, then it goes in Mathics3 Kernel.
 
 Below we list some of Mathics3 module packages. A full list can be
 found by looking in the `Mathics3 organization

@@ -10,7 +10,7 @@ The Wolfram Language ``Get`` or ``<<`` can be used to read in a file and evaluat
 
 Higher-level packaging mechanism can be built from this.
 
-We have a very crude one for packages that come distributed with the Mathics3 core, and they can be found in `mathics/packages <https://github.com/Mathics3/mathics-core/tree/master/mathics/packages>`_.
+We have a very crude one for packages that come distributed with the Mathics3 Kernel, and they can be found in `mathics/packages <https://github.com/Mathics3/mathics-core/tree/master/mathics/packages>`_.
 
 For a list of built-in packages look at that directory or in the `Mathics3 Packages Wiki page <https://github.com/Mathics3/mathics-omnibus/wiki/Mathics-Packages>`_.
 

@@ -25,7 +25,7 @@ While it might be intelletually satisfying and possibly fun writing Mathemathica
 
 The Mathics3 project has always been understaffed and undermaintained. By hooking into SymPy or some other package, the code has a better chance of being maintained as well as getting expanded and generalized, if all of that effort hasn't occured prior to the need inside Mathics3.
 
-As an example of the kind of problems we encounter here, consider Mathics original image-processing routines. Too much of this was written in pure Python. This code was both slow and buggy. And it didn't support certain image formats we wanted to use. By switching to using the Pillow Python package all of this was fixed.
+As an example of the kind of problems we encounter here, consider Mathics3 original image-processing routines. Too much of this was written in pure Python. This code was both slow and buggy. And it didn't support certain image formats we wanted to use. By switching to using the Pillow Python package all of this was fixed.
 
 Magic-bullet Technology versus Thoughtful Coding
 ++++++++++++++++++++++++++++++++++++++++++++++++
@@ -36,7 +36,7 @@ But in retrospect, a *lot* of the slowness I've seen comes from imprecise thinki
 
 In truth, what I've encountered is that a number of our problems have been simple-minded poor-performing implementations.
 
-* Unecessary conversions from Python to Mathics and vice versa
+* Unecessary conversions from Python to Mathics3 and vice versa
 * Not abstracting instruction-level evaluation routines as you might in a bytecode interpreter, and shoving everything through a very slow and general compound expression evaluation routine, instead of calling the faster instruction-level routines
 * Custom list expression evaluation. (We currently need a custom box evalution)
 
