@@ -71,7 +71,7 @@ image <https://hub.docker.com/r/mathicsorg/mathics>`_ , and
 extractable from the that, should you want to build your PDF,
 you'll need to have various TeX packages installed.
 
-Front ends Mathics-Django and mathicsscript use the Mathics Kernel.
+Front ends Mathics3-Django and mathicsscript use the Mathics3 Kernel.
 
 Mathics3 Character Tables and Tokenizer
 ---------------------------------------

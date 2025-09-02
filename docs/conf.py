@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Mathics'
+project = 'Mathics3'
 copyright = '2020-2025 The Mathics3 Team'
 author = 'The Mathics3 Team'
 

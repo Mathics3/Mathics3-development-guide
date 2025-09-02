@@ -14,7 +14,7 @@ Look at `<https://pypi.org/project/Mathics-django/>`_ and
     $ source ${github_top_dir}/version.py # to set in POSIX shell
     $ echo $__version__
 
-Mathics Django Workflows update?
+Mathics3 Django Workflows update?
 =================================
 
 Check ``.github/workflows/*.yml`` to make see if we are using
@@ -29,8 +29,8 @@ Create a new Mathics3 Django release branch
     $ git checkout -b release-$__version__
     $ git commit -m"Get ready for release $__version__" .
 
-Update Changes to Mathics Django
-================================
+Update Changes to Mathics3 Django
+=================================
 
 .. code::
 
