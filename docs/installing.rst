@@ -148,8 +148,8 @@ When you install ``Mathics-omnibus`` you are this suite of independent Mathics3 
 
 * `mathicsscript <https://pypi.org/project/mathicsscript/>`_ (``mathicsscript``)
 * `mathics-django <https://pypi.org/project/Mathics-Django/>`_ (``mathics_django``)
-* `pymathics-graph`__ (``pymathics.graph``),
-* pymathics-natlang_ (``pymathics.natlang``)
+* `Mathics3-Module-networkx`__ (``pymathics.graph``),
+* `Mathics3-Module-nltk`_ (``pymathics.natlang``)
 
 .. _pymathics-graph: https://github.com/Mathics3/pymathics-graph/
 __ pymathics-graph_
@@ -253,7 +253,7 @@ Django-based front-end called ``mathics-django``.
 There are also two Mathics3 modules written in Python:
 
 * `pymathics-graph`__
-* `pymathics-natlang`__
+* `Mathics3-Module-nltk`__
 
 .. _pymathics-graph: https://github.com/Mathics3/pymathics-graph/
 __ pymathics-graph_
@@ -276,5 +276,5 @@ To run the Django-based front-end type::
 
   $ make runserver
 
-.. _pymathics-natlang: https://github.com/Mathics3/pymathics-natlang/
-__ pymathics-natlang_
+.. _Mathics3-Module-nltk: https://github.com/Mathics3/Mathics3-Module-nltk/
+__ Mathics3-Module-nlkt_
