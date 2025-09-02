@@ -46,7 +46,7 @@ Also, updating ``mathics-pygments``, if it needs changing, can be done
 *any* time after ``mathis-scanner`` is updated, and only if changes to scanner
 cause a need to change mathics-pygments.
 
-After a release, you may want to update ``mathics-development-guide``,
+After a release, you may want to update ``Mathics3-development-guide``,
 this document, for changes in the release process.
 
 .. toctree::
