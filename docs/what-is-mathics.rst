@@ -176,22 +176,29 @@ Below we list some of Mathics3 module packages. A full list can be
 found by looking in the `Mathics3 organization
 <https://github.com/Mathics3>`_.
 
-`"Hello, World" as a Mathics3 Python Module <https://github.com/Mathics3/pymathics-hello>`_
+`"Hello, World" as a Mathics3 Python Module <https://github.com/Mathics3/Mathics3-Module-hello>`_
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This is a minimal Mathics3 Python Module for example or teaching purposes.
 
-In contrast to the Mathics3 Python Modules, this one is not general useful except for showing how to write a Mathics3 Python Module.
+In contrast to the Mathics3 Modules, this one is not general useful except for showing how to write a Mathics3 Python Module.
 
 
-`Natural Language Mathics3 Module <https://github.com/Mathics3/pymathics-language>`_
+`Mathics3 Module ICU <https://github.com/Mathics3/Mathics3-Module-PyICU>`_
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-This Mathics3 Python Module adds Natural-Language Processing (NLP) functions.
+This Mathics3 Module adds ICU functions via ``PyICU``.
 
-To use this, you will need to have `nltk
+To use `pyicu <https://pypi.org/project/pyicu>`_ needs to be installed.
+
+`Natural Language Mathics3 Module <https://github.com/Mathics3/Mathics3-Module-nltk>`_
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This Mathics3 Python Module adds Natural-Language Processing (NLP) functions via ``nltk``.
+
+To use this, `nltk
 <https://pypi.org/project/nltk>`_ and `spacy
-<https://pypi.org/project/spacy>`_ installed.
+<https://pypi.org/project/spacy>`_ need to be installed.
 
 `Network Graph Mathics3 Python Module <https://github.com/Mathics3/pymathics-graph>`_
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -217,9 +224,9 @@ way.  It provides graphics rendering using the `asymptote
 .. _mathics-pygments: https://pypi.org/project/mathics-pygments/
 
 
-Mathics3 Debugger `<https://github.com/Mathics3/mathics3-debugger>`_
+Mathics3 Debugger `<https://github.com/Mathics3/Mathics3-Module-trepan>`_
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Currently this is a work in progress and works only in very limited way.
 
-It provides graphics the ability debugging Mathics3 code and the Mathics3 implementation
+It provides the ability debugging Mathics3 code and the Mathics3 implementation
