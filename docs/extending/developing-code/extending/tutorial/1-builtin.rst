@@ -120,6 +120,43 @@ If you want to provide an error, then the code with drop the ``_String`` pattern
 	      return
           return String(f"Hello, {person.value}!")
 
+Notice that in this function, if `person` is not a `String`, the function returns the Python's default value `None`. From the point of view of the
+evaluation loop, this is seen as the same as the pattern *fails* to match the expression. Suppose now that there is another rule
+
+```
+
+  class Hello(Builtin):
+    def eval(self, person, evaluation: Evaluation) -> String:
+      "Hello[person_]"
+      ...
+
+    def eval_opts(self, person, evaluation:Evaluation, options:dict)->String
+        "Hello[person, OptionsPattern[]]"
+        ...
+```
+which handles a more sophisticated case where our function accepts options in the form of a sequence of rules. It happends that 
+`Hello[person_]` and  `Hello[person, OptionsPattern[]]` are two inequivalent patterns, which both match with an expression
+of the form `Hello[1]`. Since the rule associated to `Hello[person_]` failed to match, the evaluation loop tries with the next rule, which in this case
+is the one associated to `Hello[person, OptionsPattern[]]`, which is likely to fail too.
+To avoid contining the evaluation, when it is clear that the evaluation failed, we need to return the same expression. One way to do this would be to do something like
+```
+          if not isinstance(person, String):
+	      evaluation.message("Hello", "string", person)
+	      return Expression(Symbol("Hello", person))
+```
+which re-creates an expression that matches exactly the original expression. A better approach is to use receive in the function the full original expression. We can do this using `Pattern[expression, pat]`:
+```
+    def eval(self, person, expression, evaluation: Evaluation) -> String:
+      "Pattern[expression, Hello[person_]]"
+      if not isinstance(person, String):
+          evaluation.message("Hello", "string", person)
+	  return expression
+      return String(f"Hello, {person.value}!")
+```
+
+This approach has two advantages: on the one hand, it is faster to return a reference to an existing object than to build a new one. Also, for the evaluation loop, it is faster to check the identity of an object against itself than to compare two different objects, meaning to check recursively all the elements. 
+
+
 Next:
 
 .. toctree::
