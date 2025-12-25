@@ -177,7 +177,7 @@ found by looking in the `Mathics3 organization
 <https://github.com/Mathics3>`_.
 
 `"Hello, World" as a Mathics3 Python Module <https://github.com/Mathics3/Mathics3-Module-hello>`_
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This is a minimal Mathics3 Python Module for example or teaching purposes.
 
@@ -192,7 +192,7 @@ This Mathics3 Module adds ICU functions via ``PyICU``.
 To use `pyicu <https://pypi.org/project/pyicu>`_ needs to be installed.
 
 `Natural Language Mathics3 Module <https://github.com/Mathics3/Mathics3-Module-nltk>`_
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This Mathics3 Python Module adds Natural-Language Processing (NLP) functions via ``nltk``.
 
@@ -225,7 +225,7 @@ way.  It provides graphics rendering using the `asymptote
 
 
 Mathics3 Debugger `<https://github.com/Mathics3/Mathics3-Module-trepan>`_
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Currently this is a work in progress and works only in very limited way.
 
