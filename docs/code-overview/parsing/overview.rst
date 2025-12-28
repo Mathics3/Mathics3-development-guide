@@ -19,7 +19,7 @@ Here is an example:
 
    $ mathics --full-form
 
-   Mathics3 6.0.1
+   Mathics3 8.0.0
    ...
    Quit by pressing CONTROL-D
 
@@ -44,11 +44,3 @@ Some things to notice:
   of ``Times``, even though the FullForm output shows the simple name.
 * Parsing removes parenthesis used for grouping capturing this
   instead by the function nesting order
-
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   precedence-parsing.rst

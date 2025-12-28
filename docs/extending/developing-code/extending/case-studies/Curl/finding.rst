@@ -12,10 +12,3 @@ a SymPy search shows that ``Curl`` is a SymPy function as well:
 
 Furthermore, SymPy understands coordinate systems, which is used in
 the last form.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   where

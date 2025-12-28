@@ -35,10 +35,3 @@ When there is no existing section in Mathics3 already...
 When an existing section or subsection does not exist, see if there is a another categorization of the function for which we already do have a section or subsection.
 
 If not you will need to add a new directory. Then you'll need to add your new module name to ``setup.py`` and ``mathics/builtin/__init__.py``.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   basic

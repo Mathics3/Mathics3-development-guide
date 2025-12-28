@@ -13,5 +13,7 @@ Below are the steps in order that were used to create ``Curl``
    where
    finding
    basic
+   checking
+   finishing
 
 We will move faster over steps that were the same in :ref:`Adding Builtin ``Undefined``` and :ref:`Adding Builtin Function ``KroneckerProduct```. However, you'll find new kinds of issues arising in adding ``Curl``.

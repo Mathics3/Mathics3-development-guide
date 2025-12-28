@@ -42,11 +42,3 @@ As we added these Builtins, we recorded the steps that were taken. We ordered th
 
 
 See also :ref:`Tutorial: Adding a new Mathics3 Function`.
-
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   Undefined/index

@@ -71,10 +71,3 @@ of the fact that this is a ``SympyFunction`` and also don't need to set class va
 
 However we expect that in a more complete implementation, we would
 need this to handle the form of curl that makes use of coordinates.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   checking
