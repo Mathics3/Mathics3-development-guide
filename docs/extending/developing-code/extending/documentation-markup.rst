@@ -162,9 +162,9 @@ here, use ``...`` and *anything* will be accepted as a match:
      = ...
 
 The main goal of Doctests is to check illustrative cases that make sense to appear in
-the documentation. However, in some cases, we want to include some code needed to 
+the documentation. However, in some cases, we want to include some code needed to
 clean up variables or delete files created in the example. Also, there are some test cases
-that only work in a sandbox environment. On the other hand, we could desire to include 
+that only work in a sandbox environment. On the other hand, we could desire to include
 some code in the *Doctest* format, but we do not want to run it during the tests. For this reason,
 the following syntax was included:
 
@@ -214,6 +214,17 @@ In a cloud environment, we do not want to give the actual information about the 
     S> filename = $TemporaryDirectory <> "/example_file";
 
 In a sandboxed environment or cloud environment, we might not have write access to a filesystem, not even a temporary one.
+
+Example of ``##``
+++++++++++++++++++
+
+.. code-block::
+    >> A = InterpretationBox["Pepe", 4]
+     = InterpretationBox["Four", 4]
+    ## The Following code is not working yet:
+    ## >> DisplayForm[A]
+    ##  = Four
+
 
 Guidelines for Writing Documentation
 ====================================
@@ -282,14 +293,14 @@ The title must be followed by a definition list ``<dl>``...``</dl>``, describing
        <dd>returns the generalised Laguerre polynomial of order $n$ and index $a$, $L^a_n(x)$.
      </dl>
 
-Note the two-space indentation after the ``<dl>`` tag. 
+Note the two-space indentation after the ``<dl>`` tag.
 
 The ``<dt>`` fields show the form of using the symbol. The Mathics3 identifiers
 must be enclosed in simple quotes (``'``), while parameters are written as inline LaTeX math-mode expressions.
 The description field (``<dd>``) uses the same notation: parameter names enclosed by ``$`` and identifiers
 by ``'``. Notice also that the description can include some inline LaTeX math-mode expressions.
 If an identifier uses the special character `$`, it must be preceded by the escape character `\`. So, for instance,
-to refer to the Symbol `$Failed` it must be written as `\\$Failed`. 
+to refer to the Symbol `$Failed` it must be written as `\\$Failed`.
 
 
 Extended Description Section
