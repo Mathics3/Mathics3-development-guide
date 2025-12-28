@@ -14,16 +14,17 @@ two output files are created in `/tmp`:
   testing stability numbers are only printed with limited precision.
   `NumericArray`s print only a sampling of the array for brevity.
 
-* The `Graphics*` expression is converted to SVG and a distilled
-  outline-form version is stored in a ``*.svg.txt``. This is similarly
+* The `Graphics*` expression is converted to SVG, and a distilled
+  outline-form version is stored in a `*.svg.txt`. This is similarly
   printed with limited precision for testing stability.
 
 Then the actual output is compared against a reference output stored
 in `test_plot_detail_ref` using ordinary text line-by-line diff.  The
-distilled outline form of the test files makes such comparison an
+distilled outline form of the test files makes such a comparison an
 effective way to understand what has changed.
 
-## Running the tests
+Running the tests
+-----------------
 
 The tests can be run in the usual way with pytest, either alone or as
 part of the broader pytest suite:
@@ -36,12 +37,14 @@ During development testing I find pytest sometimes to be a bit noisy,
 so you can run the tests more directly to get more focused output:
 
 ::
+
     python -m test.builtin.drawing.test_plot_detail
 
 This will produce a diff between the actual and reference files,
 stopping after the first error. You can also try this:
 
 ::
+
     python -m test.builtin.drawing.test_plot_detail --update
 
 The `--update` flag causes it to copy any actual output files in
