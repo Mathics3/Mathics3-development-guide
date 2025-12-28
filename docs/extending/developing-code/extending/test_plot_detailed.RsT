@@ -15,7 +15,7 @@ two output files are created in `/tmp`:
   `NumericArray`s print only a sampling of the array for brevity.
 
 * The `Graphics*` expression is converted to SVG and a distilled
-  outline-form version is stored in a `*.svg.txt`. This is similarly
+  outline-form version is stored in a ``*.svg.txt``. This is similarly
   printed with limited precision for testing stability.
 
 Then the actual output is compared against a reference output stored
@@ -28,16 +28,20 @@ effective way to understand what has changed.
 The tests can be run in the usual way with pytest, either alone or as
 part of the broader pytest suite:
 
+::
+
     pytest -x test_plot_detail.py
 
 During development testing I find pytest sometimes to be a bit noisy,
 so you can run the tests more directly to get more focused output:
 
+::
     python -m test.builtin.drawing.test_plot_detail
 
 This will produce a diff between the actual and reference files,
 stopping after the first error. You can also try this:
 
+::
     python -m test.builtin.drawing.test_plot_detail --update
 
 The `--update` flag causes it to copy any actual output files in
@@ -45,7 +49,7 @@ The `--update` flag causes it to copy any actual output files in
 This is useful for two purposes:
 
 * When new test cases are added you can quickly generate the reference
-  files using `--update`.
+  files using ``--update``.
 
 * In development mode when some code change has changed the output you
   can use the `--update` flag to update the reference files, and the
