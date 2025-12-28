@@ -127,12 +127,12 @@ The following commands can be used to specify test cases.
 | ``\|`` *print*         | a printed line in the result of the test query.           |
 +------------------------+-----------------------------------------------------------+
 
-It is good to create examples that convey some aspect about the Mathics3 Function.
+It is good to create examples that convey some aspects of the Mathics3 Function.
 
 In the past, the documentation system was abused and ran edge cases
-and prior bugs fixed. For that please write a pytest.
+and prior bugs were fixed. For that, please write a pytest.
 
-However please don't create more examples. Instead please consider
+However, please don't create more examples. Instead please consider
 moving something like this to a pytest unit test which is far more flexible.
 
 Example of ``>>``, ``=``, and ``= ...``
@@ -148,7 +148,7 @@ The above is part of the docstring for the ``Plus`` class that implements the bu
 ``1 + 2`` is shown as an example in the ``Plus`` documentation
 section.  When this code is run, ``3`` is the expected output.
 
-In testing, ``make doctest`` is run, this example code is run and checked
+In testing, ``make doctest`` is run, and this example code is run and checked
 against the output. If the two do not match, a test failure is
 recorded.
 
@@ -179,7 +179,7 @@ the following syntax was included:
 | ``S>``                 | Mathics3 code to run, like ``>>``, but only if not in "Sandbox" environment |
 +------------------------+-----------------------------------------------------------------------------+
 
-In any case, as far as possible, please avoid to include as doctests any marginal case that does not
+In any case, as far as possible, please avoid in doctests marginal cases that do not
 contribute to the understanding of the final user. Very specific test cases must be included as tests
 in the *pytest* system.
 
@@ -194,7 +194,7 @@ Example of ``#>``
     #> Clear[x]
 
 
-Here, we want to give an example of ``Map`` and that sets variable ``x``. We want to
+Here, we want to give an example of ``Map`` and that sets the variable ``x``. We want to
 clear the definition to clean things up, but doing so does not serve any pedagogic purposes.
 So we can hide this from the list of examples, but have the effect of running the function.
 
@@ -219,6 +219,7 @@ Example of ``##``
 ++++++++++++++++++
 
 .. code-block::
+
     >> A = InterpretationBox["Pepe", 4]
      = InterpretationBox["Four", 4]
     ## The Following code is not working yet:
@@ -232,7 +233,7 @@ Guidelines for Writing Documentation
 
 When a new builtin is added, it is expected to follow the following guidelines regarding the format of the docstrings and ``summary_text`` attribute, which are used for building the documentation. Some of these guidelines are reinforced by the CI.
 
-``summary_text`` is used in the online documentation as a brief description of what the symbol represents. For builtins representing the head of expressions, ``summary_text``, starts with an active verb with the word in lowercase, e.g. "retrieve" as opposed to "Retrieve".  If you look at the section that the summary appears it is nice to use the same verb for similar kinds of things. For example we may "list" builtins that end with "List" (``EdgeList``, ``VertexList``) but, "find" builtins with "Index" at the end of the name ``EdgeIndex``, ``VertexIndex``. For variables, and options, do _not_ start with an active verb.
+``summary_text`` is used in the online documentation as a brief description of what the symbol represents. For builtins representing the head of expressions, ``summary_text``, starts with an active verb with the word in lowercase, e.g. "retrieve" as opposed to "Retrieve".  If you look at the section that the summary appears it is nice to use the same verb for similar kinds of things. For example, we may "list" builtins that end with "List" (``EdgeList``, ``VertexList``) but, "find" builtins with "Index" at the end of the name ``EdgeIndex``, ``VertexIndex``. For variables, and options, do _not_ start with an active verb.
 
 Docstrings contain information about the content of the documentation entry. They must consist on the following parts:
 
@@ -258,22 +259,22 @@ Or you can omit the title altogether. ``RandomGraph`` is an example.
 
 In general, we go with the Wikipedia name rather than the WMA for the title, including symbolic parameter names. ``CompleteKaryTree`` is an example.
 
-When the only thing available is a WMA link we add "link" to the title. ``EdgeList`` is an example.
+When the only thing available is a WMA link, we add "link" to the title. ``EdgeList`` is an example.
 
 Remember that line breaks are significant. ``\`` can be used to wrap a long line.
-Start the url name on a new line after ``<url>``. For example:
+Start the URL name on a new line after ``<url>``. For example::
 
-```
-<url>
-:WMA link:
-https://reference.wolfram.com/language/ref/EdgeList.html</url>
-```
+
+    <url>
+    :WMA link:
+    https://reference.wolfram.com/language/ref/EdgeList.html</url>
+
 
 Note that there is no line break at the end before or after ``</url>``.
 
-Please don't get too creative in formatting. There are many other areas in the selection of words to describe what is need may require care. But here it shouldn't require much thought for the _formatting_ aspects.
+Please don't get too creative in formatting. There are many other areas in the selection of words to describe what is need may require care. But here it shouldn't require much thought for the *formatting* aspects.
 
-If the URL is too long, of course, you can split it up in a way that the URL tag understands.  Please inspect the URLs in a browser for change.  Ideally, you would click the link, but if not, or before, look at the URL that appears when the link is hovered over.
+If the URL is too long, of course, you can split it up in a way that the URL tag understands.  Please inspect the URLs in a browser for changes.  Ideally, you would click the link, but if not, or before, look at the URL that appears when the link is hovered over.
 
 
 
@@ -283,7 +284,7 @@ There should be at least one doc example for each function that is focused on de
 Definition Block
 ----------------
 
-The title must be followed by a definition list ``<dl>``...``</dl>``, describing the different ways to use the symbol. For example, in the  Builtin class ``LaguerreL``::
+The title must be followed by a definition list ``<dl>`` ... ``</dl>``, describing the different ways to use the symbol. For example, in the  Builtin class ``LaguerreL``::
 
      <dl>
        <dt>'LaguerreL'[$n$, $x$]
