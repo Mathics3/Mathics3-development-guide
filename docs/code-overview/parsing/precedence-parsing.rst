@@ -319,10 +319,3 @@ References
    Henry Baker 1994, ‘CONS Should Not CONS Its Arguments, Part II:
    Cheney on the M.T.A.[1]’, unpublished note on implementing TCO with
    trampolines.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   parsing-a-string.rst

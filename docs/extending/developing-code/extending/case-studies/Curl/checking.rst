@@ -34,10 +34,3 @@ Rather than go into an ``mathics`` shell, we will just run the doc tests:
     b'   5 ( 0): TEST Clear[a, b];'
 
    All tests passed.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   finishing
