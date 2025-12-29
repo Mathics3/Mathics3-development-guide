@@ -8,6 +8,7 @@ Tests come in the following kinds:
 * tests inside examples
 * integration tests
 * benchmark tests
+* plot tests
 
 Benchmark testing is a topic in of itself and we don't have things fully automated here.
 
@@ -102,3 +103,65 @@ Those can be installed in Debian-based system with
 ::
 
     $ apt-get install texlive-font-utils latexmk texlive-xetex lmodern inkscape texlive-latex-extra texlive-latex texlive-fonts-recommended asymptote
+
+Plot Output tests
+------------------
+
+Testing SVG and plot testing are implemented in ``test/builtin/drawing/test_plot_detail.py``.
+These are driven by test cases described in the ``test/builtin/drawing/test_plot_detail_ref/*.yaml``
+files. These test cases provide broad coverage of plotting functions.
+
+The test cases list in the ``*.yaml`` files are executed and then
+two output files are created in ``/tmp``:
+
+* A ``.txt`` file contains a distilled outline-form version of the
+  ``Graphics*`` expression produced by the plotting routine.  For
+  testing stability numbers are only printed with limited precision.
+  The ``NumericArray`` value is only a sampling of the array for brevity.
+
+* The ``Graphics*`` expression is converted to SVG, and a distilled
+  outline-form version is stored in a ``*.svg.txt``. This is similarly
+  printed with limited precision for testing stability.
+
+Then the actual output is compared against a reference output stored
+in ``test_plot_detail_ref`` using ordinary text line-by-line diff.  The
+distilled outline form of the test files makes such a comparison an
+effective way to understand what has changed.
+
+Running the tests
++++++++++++++++++
+
+The tests can be run in the usual way with pytest, either alone or as
+part of the broader pytest suite:
+
+::
+
+    pytest -x test_plot_detail.py
+
+During development testing I find pytest sometimes to be a bit noisy,
+so you can run the tests more directly to get more focused output:
+
+::
+
+    python -m test.builtin.drawing.test_plot_detail
+
+This will produce a diff between the actual and reference files,
+stopping after the first error. You can also try this:
+
+::
+
+    python -m test.builtin.drawing.test_plot_detail --update
+
+The ``--update`` flag causes it to copy any actual output files in
+``/tmp`` that differ to the reference directory ``test_plot_detail_ref``.
+
+This is useful for two purposes:
+
+* When new test cases are added you can quickly generate the reference
+  files using ``--update``.
+
+* In development mode when some code change has changed the output you
+  can use the ``--update`` flag to update the reference files, and the
+  use git tools to quickly examine the changes and decide whether to
+  accept them by committing, or not by reverting. You might find the
+  diff view offered by GitHub Desktop useful for this purpose.

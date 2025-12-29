@@ -147,10 +147,3 @@ Now let us try ``MCurl`` in a mathics session:
 
     In[6]:= MCurl[{y, -x, 2 z}, {x, y, z}]
     Out[6]= {0, 0, -2}
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   finding

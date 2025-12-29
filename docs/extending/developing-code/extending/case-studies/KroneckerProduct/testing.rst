@@ -68,10 +68,3 @@ As we did in ``Undefined``, we can run the doctest test automatically:
 We should write pytest tests for error conditions and more try some
 degenerate cases. If you are looking for something to do please feel
 free to complete the implementation adding error cases.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   ../Curl/index
