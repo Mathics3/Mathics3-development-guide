@@ -57,6 +57,6 @@ this document, for changes in the release process.
    releasing/Mathics3-Kernel.rst
    releasing/mathicsscript.rst
    releasing/mathics-django.rst
-   releasing/pymathics-graph.rst
+   releasing/Mathics3-Module-networkx.rst
    releasing/Mathics3-Module-nltk.rst
    releasing/Mathics3-Module-hello.rst

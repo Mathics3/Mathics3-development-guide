@@ -24,7 +24,7 @@ class.
     </dl>
     """
 
-In addition class variable ``summary_text`` should be set::
+In addition class variable ``summary_text`` should be set:
 
 .. code-block:: python
 
@@ -72,6 +72,6 @@ This is how the text appears getting help via ``?`` in ``mathicsscript``:
 
 When adding a builtin function to Mathics3 we also include links to Wikipedia, SyMPy, mpmath, and the corresponding WMA builtin, whichever is appropriate.
 
-See :ref:``KroneckerProduct Basic Skeleton <doc_basic_skeleton>` for an example.
+See :ref:`KroneckerProduct Basic Skeleton <doc_basic_skeleton>` for an example.
 
 See :ref:`For Help Text <doc_help_markup>` for more a list of help-related markup.
