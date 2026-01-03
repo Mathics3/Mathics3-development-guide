@@ -69,10 +69,3 @@ To see the effect of ``summary_text`` in the CLI, we will use the stripped down 
 
 
 The completed class definition for ``Undefined`` can be found `on github <https://github.com/Mathics3/mathics-core/blob/master/mathics/builtin/numbers/constants.py>`_.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   testing

@@ -10,10 +10,3 @@ Asking in the `Q/A section of mathics-core <https://github.com/Mathics3/mathics-
 ``Attributes[Undefined]={Protected}``.
 
 Another place where you may be able to get information about Mathematica is `StackExchange Mathematica and Wolfram Language <https://mathematica.stackexchange.com/>`_
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   similar

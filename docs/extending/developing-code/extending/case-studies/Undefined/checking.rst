@@ -58,10 +58,3 @@ called ``mathics`` we can also see this builtin
 We used the special flag ``--full-form`` which shows the expanded
 *input*. When we typed in "Undefined" note that we got the name space filled out as ``System``.
 Before adding this class it would have appeared in the namespace ``Global``.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   completing

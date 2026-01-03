@@ -64,10 +64,3 @@ Here is a command that will run just this test:
     ...
     -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
     ======================= 1 passed, 1 warning in 2.14s =======================
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   ../KroneckerProduct/index

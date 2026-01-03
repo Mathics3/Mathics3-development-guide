@@ -50,10 +50,3 @@ If you hover to the right of this test an equals sign (``=``) appears and if you
 
 
 See :ref:`Markup for Testing <doc_test_markup>` for more a list of test-related markup.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   4-patterns

@@ -1,3 +1,5 @@
+.. _doc_basic_skeleton:
+
 ``KroneckerProduct`` Basic Skeleton
 ====================================
 
@@ -113,7 +115,7 @@ And here we encounter some new markup. First, there are lines that start with ``
 the expected output has line breaks in them. The attach to the output that appears above them: either another
 line that starts ``.`` or a line that starts ``=``.
 
-Finally we have a line that starts ``#>``. This indicates a Mathics
+Finally we have a line that starts ``#>``. This indicates a Mathics3
 statement that is to be run, but should not be shown in the Django
 documentation. We use this here as cleanup for the code that gets in
 the examples before: we had defined two variables *a* and *b*, and we

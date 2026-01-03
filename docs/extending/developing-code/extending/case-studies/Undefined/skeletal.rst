@@ -95,10 +95,3 @@ that shows the attributes.
     # ...
 
 In a later we will describe in more detail what the lines with ``>>`` and ``=`` below that mean.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   checking

@@ -70,10 +70,3 @@ If a function does not return any value, the Mathics3 expression is
 left unchanged. Note that you have to explicitly return
 ``Symbol["Null"]`` (which we have a defined for you in ``SymbolNull``)
 if you want that to return *Null*.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   5-rules

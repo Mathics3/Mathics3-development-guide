@@ -123,7 +123,7 @@ function that corresponds to the Mathics3 function. And the return
 value is converted back into Mathics3 for return.
 
 Again we don't do checking on the return value from SymPy or from the
-conversion back to Mathics' internal Element-based object. In a future
+conversion back to Mathics3' internal Element-based object. In a future
 version we should do this.
 
 We have a number of Mathics3 builtin functions that work like this. One

@@ -48,10 +48,3 @@ there for an example of how this works.
 `TraceEvaluation[]`` will rewrite rules as they occur in evaluation.
 
 Although using rewrite rule can reduce the amount of Python code needed to implement a function, rewrite rules have a few drawbacks. The main drawback is that you make it harder to error check parameters.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   6-attributes

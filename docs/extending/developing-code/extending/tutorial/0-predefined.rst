@@ -52,10 +52,3 @@ superclass of :ref:`BaseElement Class`. A ``String`` is a subclass of
 the :ref:`Atom Class` which in turn is a subclass of the
 ``BaseElement``. You can also return the ``None`` value, in which case
 the expression is unchanged.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   1-builtin.rst

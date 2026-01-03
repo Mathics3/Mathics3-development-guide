@@ -119,10 +119,3 @@ If you want to provide an error, then the code with drop the ``_String`` pattern
 	      evaluation.message("Hello", "string", person)
 	      return
           return String(f"Hello, {person.value}!")
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   2-help-markup

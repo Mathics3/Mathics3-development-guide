@@ -1,4 +1,4 @@
-``KroneckerProduct`` placement in Mathics
+``KroneckerProduct`` placement in Mathics3
 ==========================================
 
 To find where to put ``KroneckerProduct`` in Mathics, we look this up the  `WMA docs <https://reference.wolfram.com/language/ref/KroneckerProduct.html>`_  and then looking at the Related Guides drop-down menu we see:

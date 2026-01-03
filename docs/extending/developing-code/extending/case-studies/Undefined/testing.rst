@@ -53,10 +53,3 @@ The ``-s`` option limits the testing just to this new section we added
 called ``Undefined``.  Another useful option that is often used is
 ``-x``. That option modeled after the ``-x`` option in pytest: it
 stops on the first error.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   pytest

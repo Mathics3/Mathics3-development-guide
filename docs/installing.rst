@@ -277,4 +277,4 @@ To run the Django-based front-end type::
   $ make runserver
 
 .. _Mathics3-Module-nltk: https://github.com/Mathics3/Mathics3-Module-nltk/
-__ Mathics3-Module-nlkt_
+__ Mathics3-Module-nltk_

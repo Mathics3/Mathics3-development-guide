@@ -24,13 +24,17 @@ class.
     </dl>
     """
 
+In addition class variable ``summary_text`` should be set::
+
+.. code-block:: python
+
     summary_text = 'prints "Hello, <name>"'
 
     def eval(self, person: String, evaluation: Evaluation) -> String:
       "Hello[person_String]"
           return String(f"Hello, {person.value}!")
 
-The class variable ``summary_text`` provides the text when you type ``?Hello``::
+This provides the text when you type ``?Hello``::
 
     In[1]:= ?Hello
     prints "Hello <name>"
@@ -66,11 +70,8 @@ This is how the text appears getting help via ``?`` in ``mathicsscript``:
   :width: 400
   :alt: Rendering XML help markup in Django
 
+When adding a builtin function to Mathics3 we also include links to Wikipedia, SyMPy, mpmath, and the corresponding WMA builtin, whichever is appropriate.
+
+See :ref:``KroneckerProduct Basic Skeleton <doc_basic_skeleton>` for an example.
+
 See :ref:`For Help Text <doc_help_markup>` for more a list of help-related markup.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   3-test-markup
