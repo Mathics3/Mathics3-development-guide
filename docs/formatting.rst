@@ -2,6 +2,8 @@
 Format and Export Expressions
 -----------------------------
 
+.. index:: Expression format and render
+
 When the evaluation on an expression is completed, i.e. reach its canonical
 form after the sucesive application of evaluation rules, it must be transformed
 into a representation suitable to be displayed on a front-end, or encoded
