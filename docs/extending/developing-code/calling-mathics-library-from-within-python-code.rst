@@ -104,20 +104,21 @@ area to save results, and to look up previous definitions and results.
    session = MathicsSession(catch_interrupt=True)
 
    # These are Mathics3 classes we are going to use.
-   from mathics.core.expression import Expression, Integer
+   from mathics.core.expression import Expression
+   from mathics.core.atoms import Integer
    from mathics.core.systemsymbols import SymbolFactorial
    # SymbolFactorial = Symbol("System`Factorial")
 
-   # Compute 20!
+   # Compute 10!
    x = Expression(SymbolFactorial, Integer(10)
                  ).evaluate(session.evaluation).to_python() # SymbolFactorial can be replaced by Symbol("Factorial")
-   print(x) # 2432902008176640000
+   print(x) # 3628800
 
 The above code computes the same value as in the last section. However we are
 doing this by interacting with the Mathics3 classes now.
 
 In this example shown above, we convert from Python's literal 10 to
-Mathics3's representation of for 10 using ``Integer(10)``. This value is
+Mathics3's representation of 10 using ``Integer(10)``. This value is
 needed as a parameter to the ``Factorial`` function . Strictly speaking,
 the full name of the factorial function is ``System`Factorial``, but
 we can leave off the context name, ``System``, and Mathics3 will look
@@ -157,7 +158,8 @@ Here is an example of that:
    session = MathicsSession(catch_interrupt=True)
 
    # These are Mathics3 classes we are going to use.
-   from mathics.core.expression import Expression, Integer
+   from mathics.core.expression import Expression
+   from mathics.core.atoms import Integer
    from mathics.core.symbols import SymbolPlus, SymbolTimes
    # SymbolPlus = Symbol("System`Plus"), SymbolTimes = Symbol("System`Times")
 
@@ -180,7 +182,7 @@ numeric operators ``+``, ``-``, ``/``, ``*``, ``abs()``, ``//``, and
    from mathics.session import MathicsSession
    session = MathicsSession(catch_interrupt=True)
 
-   from mathics.core.expression import Integer
+   from mathics.core.atoms import Integer
 
    # Compute 5 * (6 + 3)
 
