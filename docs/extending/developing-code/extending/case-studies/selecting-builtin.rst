@@ -30,12 +30,9 @@ In a cloned git directory, you can find some of missing using ``git grep -n '^# 
 Below, we have a few examples of some actual Mathics3 Builtins that we have added. Hopefully you can use this as an aid for filling in one of the many Builtin Functions, such as one of the above.
 
 
-.. toctree::
-   :maxdepth: 1
-
-   Undefined/index
-   KroneckerProduct/index
-   Curl/index
+*  :ref: `Undefined`
+*  :ref: `KroneckerProduct`
+*  :ref: `Curl`
 
 
 As we added these Builtins, we recorded the steps that were taken. We ordered the list above to go from the simple to more advanced.

@@ -13,12 +13,13 @@ After reading this you may want to go through the detailed examples in :ref:`Cas
 
    tutorial/0-predefined
    tutorial/1-builtin
-   tutorial/2-help-markup
-   tutorial/3-test-markup
-   tutorial/4-patterns
-   tutorial/5-rules
-   tutorial/6-attributes
-   tutorial/7-warnings
+   tutorial/2-parameter-checking
+   tutorial/3-help-markup
+   tutorial/4-test-markup
+   tutorial/5-patterns
+   tutorial/6-rules
+   tutorial/7-attributes
+   tutorial/8-warnings
 
 .. TODO: Document Operator and SympyFunction
 .. TODO: Document interrupts
