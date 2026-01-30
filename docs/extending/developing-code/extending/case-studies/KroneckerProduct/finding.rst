@@ -13,10 +13,3 @@ corresponding Wikipedia entry. For example, the mathics function
 name is "Euler's totient function".
 
 The Wikipedia name for ``KroneckerProduct`` is "Kronecker product".
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   where

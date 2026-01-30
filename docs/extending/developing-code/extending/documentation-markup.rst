@@ -109,23 +109,27 @@ Markup for Code Examples
 
 The following commands can be used to specify test cases.
 
-+------------------------+-----------------------------------------------------------+
-| Markup                 | Meaning                                                   |
-+========================+===========================================================+
-| ``>>`` *Mathics3 code* | Some Mathics3 code to run and to appear in documentation. |
-+------------------------+-----------------------------------------------------------+
-| ``=`` *output*         | expected output produced by the Mathics3 code.            |
-+------------------------+-----------------------------------------------------------+
-| ``...``                | matches any output; used when output can vary.            |
-+------------------------+-----------------------------------------------------------+
-| ``.``                  | a newline which is expected to appear in test output.     |
-+------------------------+-----------------------------------------------------------+
-| ``-Graphics-``         | graphics in the test result.                              |
-+------------------------+-----------------------------------------------------------+
-| ``:`` *message*        | a message in the result of the test query.                |
-+------------------------+-----------------------------------------------------------+
-| ``\|`` *print*         | a printed line in the result of the test query.           |
-+------------------------+-----------------------------------------------------------+
++------------------------+--------------------------------------------------------------+
+| Markup                 | Meaning                                                      |
++========================+==============================================================+
+| ``>>`` *Mathics3 code* | Mathics3 code to run and to appear in documentation.         |
++------------------------+--------------------------------------------------------------+
+| ``>S`` *Mathics3 code* | Mathics3 code to run unless sandboxed, but in documentation. |
++------------------------+--------------------------------------------------------------+
+| ``>X`` *Mathics3 code* | Mathics3 not run, but shown in documentation.                |
++------------------------+--------------------------------------------------------------+
+| ``=`` *output*         | expected output produced by the Mathics3 code.               |
++------------------------+--------------------------------------------------------------+
+| ``...``                | matches any output; used when output can vary.               |
++------------------------+--------------------------------------------------------------+
+| ``.``                  | a newline which is expected to appear in test output.        |
++------------------------+--------------------------------------------------------------+
+| ``-Graphics-``         | graphics in the test result.                                 |
++------------------------+--------------------------------------------------------------+
+| ``:`` *message*        | a message in the result of the test query.                   |
++------------------------+--------------------------------------------------------------+
+| ``\|`` *print*         | a printed line in the result of the test query.              |
++------------------------+--------------------------------------------------------------+
 
 It is good to create examples that convey some aspects of the Mathics3 Function.
 
@@ -163,25 +167,19 @@ here, use ``...`` and *anything* will be accepted as a match:
 
 The main goal of Doctests is to check illustrative cases that make sense to appear in
 the documentation. However, in some cases, we want to include some code needed to
-clean up variables or delete files created in the example. Also, there are some test cases
-that only work in a sandbox environment. On the other hand, we could desire to include
-some code in the *Doctest* format, but we do not want to run it during the tests. For this reason,
-the following syntax was included:
+clean up variables or delete files created in the example. For this use ``#>``.
 
+Some commands, such as those for querying the runtime OS or
+environment, and running arbitrary OS shell commands, are not
+available in a sandboxed environment. To indicate this facet, use
+``S>`` and the test code will not be run when inside a sandboxed environment.
 
-+------------------------+-----------------------------------------------------------------------------+
-| Markup                 | Meaning                                                                     |
-+========================+=============================================================================+
-| ``#>`` *Mathics3 code* | Mathics3 code to run but not appearing documentation.                       |
-+------------------------+-----------------------------------------------------------------------------+
-| ``X>`` *Mathics3 code* | Mathics3 code shown in the documentation but not run.                       |
-+------------------------+-----------------------------------------------------------------------------+
-| ``S>``                 | Mathics3 code to run, like ``>>``, but only if not in "Sandbox" environment |
-+------------------------+-----------------------------------------------------------------------------+
+Finally, there are some tests that we don't want to be run, should be included in documentation, but not
+tested, even using `...` to match arbitrary output.  To mark this situation, use ``X>``.
 
-In any case, as far as possible, please avoid in doctests marginal cases that do not
-contribute to the understanding of the final user. Very specific test cases must be included as tests
-in the *pytest* system.
+Please avoid in doctests running marginal cases that do not contribute to the
+understanding of the final user. Very specific test cases must be
+included as tests in the *pytest* system.
 
 Example of ``#>``
 +++++++++++++++++

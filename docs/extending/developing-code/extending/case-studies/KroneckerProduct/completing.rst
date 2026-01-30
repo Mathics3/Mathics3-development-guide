@@ -160,10 +160,3 @@ performance, there are also some downsides; in some cases this kind of
 thing might even have to be undone in the future.
 
 A full version of the basic implementation can be found in `this commit <https://github.com/Mathics3/mathics-core/commit/f6dcba5e2639b0fa9bf4c9ee59b2995ec257f7bb>`_.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   testing

@@ -11,10 +11,3 @@ Connect to the Django application. In the documentation section (on the right or
 However if we type "Operations" we see "Operations on Vectors" is already there and it has a subsection called "Vector Space Operations". So let's use that.
 
 A ``git grep 'Vector Space Operations'`` tells us that this is located in ``mathics/builtins/vectors/vector_space_operations.py``.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   skeletal

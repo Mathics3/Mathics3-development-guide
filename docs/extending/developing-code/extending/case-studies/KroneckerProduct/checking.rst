@@ -49,10 +49,3 @@ first before ``Normalize``.
 
 Click on "KroneckerProduct" in that list and we now see all of the
 information in the docstring we just entered.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   completing

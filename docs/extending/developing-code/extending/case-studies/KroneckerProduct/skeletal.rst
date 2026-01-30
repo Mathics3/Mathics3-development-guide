@@ -123,10 +123,3 @@ now want to make sure these definitions get removed. Since we don't
 really care about the output of ``Clear[]`` (which is ``None``) we add
 the semicolon to suppress output. Notice that there is no ``=`` line
 after ``Clear`` because no output is expected.
-
-Next:
-
-.. toctree::
-   :maxdepth: 1
-
-   checking.rst
