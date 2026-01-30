@@ -62,7 +62,7 @@ The docstring for the ``eval`` method is a Mathics3 pattern:
 
       "Hello[person_String]"
 
-Inside Mathic3 you can test what this matches using the Mathics3 ``MatchQ[]`` function:
+Inside Mathics3, you can test what this matches using the Mathics3 ``MatchQ[]`` function:
 
 .. code-block:: mathematica
 
