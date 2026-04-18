@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Mathics3'
-copyright = '2020-2025 The Mathics3 Team'
+copyright = '2020-2026 The Mathics3 Team'
 author = 'The Mathics3 Team'
 
 # The full version, including alpha/beta/rc tags
