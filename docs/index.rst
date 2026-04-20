@@ -10,7 +10,7 @@ Mathics3's Developer Reference
    :maxdepth: 4
    :caption: Contents:
 
-   what-is-mathics
+   what-is-mathics3
    installing
    running
    bugs

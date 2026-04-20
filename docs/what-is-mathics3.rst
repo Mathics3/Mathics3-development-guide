@@ -135,7 +135,7 @@ Some of its features:
 * Integrated graphics and MathML mathematics output via MathJax
 * Notebook-like sessions
 
-To use this, you will need Django 3.2.5 or later installed, and a
+To use this, you will need Django 6.0 or later installed, and a
 browser with JavaScript enabled.
 
 Note: in the future, we intend to also provide a Jupyter-like interface.
