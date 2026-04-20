@@ -68,11 +68,11 @@ On Mac OS X:
 ::
 
     $ brew install sqlite3
-    $ brew install llvm@11
+    $ brew install llvm@18
 
 Make sure when you install llvmlite to specify the ``LLVM_CONFIG``::
 
-    $ LLVM_CONFIG=/usr/local/Cellar/llvm@11/11.1.0/bin/llvm-config pip install llvmlite
+    $ LLVM_CONFIG=/usr/local/Cellar/llvm@18/18.1.8/bin/llvm-config pip install llvmlite
 
 FreeBSD
 ~~~~~~~
