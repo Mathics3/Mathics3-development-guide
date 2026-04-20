@@ -16,22 +16,13 @@ Command-line interface
 If you have installed the Mathics3 core only you can start the
 rudimentary command-line shell with:
 
-.. code:: bash
+.. codeblock:: bash
 
-    $ mathics
-
-If you are running code from the source tree, i.e. "develop" mode, the
-the above is the same thing as running:
-
-.. code:: bash
-
-    $ python mathics/main.py
-
-To get a list of options run:
+    $ mathics3
 
 ::
 
-    $ mathics --help
+    $ mathics3 --help
 
 However note that the above CLI is pretty minimal and will stay
 that way.
@@ -44,7 +35,7 @@ The more complete command-line shell is
 
 After installing, run:
 
-.. code:: bash
+.. codeblock:: bash
 
     $ mathicsscript
 
@@ -70,24 +61,25 @@ that).
 
 To start the server after Mathics3 has been installed, run:
 
-.. code:: bash
+.. codeblock:: bash
 
-    $ mathicsserver
+    $ Mathics3server
 
 The first time this command is run it will create the database file for
 saving your sessions. Issue
 
-::
+.. codeblock:: bash
 
-    $ mathicsserver --help
+
+    $ Mathics3server --help
 
 to see a list of options.
 
 You can set the used port by using the option ``-p``, as in:
 
-::
+.. codeblock:: bash
 
-    $ mathicsserver -p 8010
+    $ Mathics3Server -p 8010
 
 The default port for Mathics3 is 8000. Make sure you have the necessary
 privileges to start an application that listens to this port. Otherwise,
@@ -105,24 +97,9 @@ will get restarted, we have a GNU Makefile target for doing that.
 
 Here, run:
 
-.. code:: bash
+.. codeblock:: bash
 
-    $ make runserver
-
-This is the same thing as running
-``python mathics/manage.py runserver``.
-
-Passing options such as setting the port to listen on is a little
-different here because the option has to be a ``manage.py`` option and
-that works different.py. And to complicate things further you are
-running GNU Make and then have to pass tell that to pass over the
-``manage.py`` option. So use pass ``o=8001`` to make in order to pass
-option ``8001`` to ``manage.py``. In other words, to set the port here
-to 8001:
-
-.. code:: bash
-
-    $ make runserver o=8001 # note, no dash
+    $ Mathics3Server
 
 Running via docker
 ~~~~~~~~~~~~~~~~~~
@@ -190,35 +167,13 @@ facing webserver.
 Best practices for a local network
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  Install PyPy
-
-   ::
-
-       sudo apt-get install pypy
-
--  Install Setuptools
-
-   ::
-
-       curl -O http://peak.telecommunity.com/dist/ez_setup.py
-       pypy ez_setup.py
-
--  Download and Install Mathics
-
-   ::
-
-       curl -L  -O https://github.com/mathics/Mathics/releases/download/v0.8/mathics-0.8.tar.gz`
-       tar xzf mathics-0.8.tar.gz
-       cd mathics-0.8/
-       sudo pypy setup.py install
-
-You can now run the web server with ``mathicsserver -e`` but you
-probably want to make some changes first. - disable the files module by
-setting ``ENABLE_FILES_MODULE = False`` in ``mathics/settings.py``
-(otherwise remote users will be able to read and write local files). -
-set an execution timeout in ``mathics/settings.py``, e.g.
-``TIMEOUT = 10`` for a 10s limit. - Various other changes in the
-``settings.py`` file like email addresses.
+Run the web server with the ``--production`` option.  Disable the
+files module by setting ``ENABLE_FILES_MODULE = False`` in
+``mathics/settings.py`` (otherwise remote users will be able to read
+and write local files). - set an execution timeout in
+``mathics/settings.py``, e.g.  ``TIMEOUT = 10`` for a 10s limit. -
+Various other changes in the ``settings.py`` file like email
+addresses.
 
 You probably also want to run the server as a restricted user within a
 jail shell
@@ -228,11 +183,6 @@ Running Mathics3 on a public webserver
 
 **Warning:** You should be very careful running Mathics3 publicly, there
 are some potentially large security implications to be aware of!
-
-The setup is similar but you can use ngnix to cache the static content.
-Mathics3 runs as a wsgi app so you can use uwsgi. The `Django
-docs <https://uwsgi-docs.readthedocs.org/en/latest/tutorials/Django_and_nginx.html>`__
-are a good reference.
 
 .. toctree::
    :maxdepth: 2
