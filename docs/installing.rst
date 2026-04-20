@@ -11,14 +11,13 @@ Here we describe the various ways to get Mathics3 installed.
 Mathics3 (mathics-core) Requirements
 ------------------------------------
 
-The Mathics3 suite runs on Python 3.10 or later.
+The Mathics3 suite runs on Python 3.11 or later.
 
 Underneath, Mathics3 Kernel relies on
 `SymPy <https://www.sympy.org/en/index.html>`__ which relies on
 `NumPy <https://numpy.org>`__. These and the other requirements will be
 installed automatically if you use the standard Python installer
-`pip <https://pip.pypa.io/en/stable/>`_. They are also listed in
-`setup.py <https://github.com/mathics/Mathics/blob/master/setup.py>`__.
+`pip <https://pip.pypa.io/en/stable/>`_.
 
 `SciPy <https://SciPy.org/>`_ is optional. It is used for images and
 provides alternative implementations for a number of builtins.
@@ -134,48 +133,48 @@ Install from PyPI
 If you have the appropriate OS-dependent packages installed, and want to install everything in one shot,
 try::
 
-       $ pip install Mathics-omnibus[full]
+       $ pip install Mathics3-omnibus[full]
 
 This might not work if you don't have the full suite of support OS packages `LLVM <https://llvm.org>`_, `xetex <https://en.wikipedia.org/wiki/XeTeX>`_ and numerous others, the above may fail.
 
 You can try a more minimal installation using::
 
-       $ pip install Mathics-omnibus
+       $ pip install Mathics3-omnibus
 
 *Important Note*: when installing the full suite of programs as is done in ``Mathics-omnibus``, all of the components are guaranteed to work either if everything is installed via PyPI or installed using current sources. Mixing current sources with packages from PyPI may not work because as of 2023 and for a little while longer our API keeps changing a bit drastically. At some point in the far future the API will become more stable.
 
-When you install ``Mathics-omnibus`` you are this suite of independent Mathics3 packages:
+When you install ``Mathics3-omnibus`` you are this suite of independent Mathics3 packages:
 
 * `mathicsscript <https://pypi.org/project/mathicsscript/>`_ (``mathicsscript``)
-* `mathics-django <https://pypi.org/project/Mathics-Django/>`_ (``mathics_django``)
+* `Mathics3-django <https://pypi.org/project/Mathics3-Django/>`_ (``mathics_django``)
 * `Mathics3-Module-networkx`__ (``pymathics.graph``),
 * `Mathics3-Module-nltk`_ (``pymathics.natlang``)
 
-.. _pymathics-graph: https://github.com/Mathics3/pymathics-graph/
+.. _pymathics-graph: https://github.com/Mathics3/Mathics3-Module-networkx/
 __ pymathics-graph_
 
 These packages in turn pull in two other Mathics3 packages:
 
-* `Mathics-Scanner <https://pypi.org/project/Mathics-Scanner/>`_ (``mathics_scanner``)
+* `Mathics-Scanner <https://pypi.org/project/Mathics3-scanner/>`_ (``mathics_scanner``)
 * `Mathics3 <https://pypi.org/project/Mathics3/mathics-core>`_ (``mathics``)
 
 and possibly:
 
-* `mathics-pygments <https://pypi.org/project/Mathics3/mathics-pygments>`_ (``mathics_pygments``)
+* `Mathics3-pygments <https://pypi.org/project/Mathics3/Mathics3-pygments>`_ (``Mathics3_pygments``)
 
 Above, the name in parenthesis is the Python ``import`` module name you would use to import from that package.
 
 
-The `Mathics-omnibus <https://pypi.org/project/Mathics-omnibus/>`_ Python package doesn't have any code per se in it. Instead, it just contains dependencies to other PyPI Mathics3 packages.of other PyPI package.
+The `Mathics3-omnibus <https://pypi.org/project/Mathics3-omnibus/>`_ Python package doesn't have any code per se in it. Instead, it just contains dependencies to other PyPI Mathics3 packages.of other PyPI package.
 
 It is more or less equivalent to::
 
-       $ pip install Mathics-Scanner # Mathics3 scanner and builtin operator definitions
+       $ pip install Mathics3-Scanner # Mathics3 scanner and builtin operator definitions
        $ pip install Mathics3  # this is the core engine. It is a dependency of some of the below too
-       $ pip install Mathics-Django[full] # web front-end with extras
+       $ pip install Mathics3-Django[full] # web front-end with extras
        $ pip install mathicsscript[full]  # the command-line interface with extras
-       $ pip install pymathics-natlang # the Natural-language Python module
-       $ pip install pymathics-graph # the Python module for working with Graphs and Networks
+       $ pip install Mathics3-Module-nltk # the Natural-language Python module
+       $ pip install Mathics3-Module-networkx # the Python module for working with Graphs and Networks
 
 If something fails, try using the above commands one by one, and
 remove the ``[full]`` to get a more basic installation.
@@ -206,7 +205,7 @@ This will pull the latest development release that has a docker
 tag name ``#latest`` if you want a stable release, give the version in
 the pull command. For example
 
-    $ docker pull mathicsorg/mathics#5.0.0
+    $ docker pull mathicsorg/mathics#9.0.0
 
 From an OS-Specific Repository
 ------------------------------
@@ -235,30 +234,30 @@ development version uses.
 
 The minimal set of Mathics3 Python packages that need to be installed is:
 
-* `mathics scanner <https://github.com/Mathics3/mathics-scanner/>`_
-* `mathics-core <https://github.com/Mathics3/mathics-core/>`_
+* `Mathics3 scanner <https://github.com/Mathics3/mathics-scanner/>`_
+* `Mathics3 core <https://github.com/Mathics3/mathics-core/>`_
 
-When ``Mathics3`` (which depends on ``Mathics-Scanner``) is installed,
+When ``Mathics3`` (which depends on ``Mathics3-Scanner``) is installed,
 there is a minimalist command-line utility called ``mathics``
 available which allows you to enter Mathics3 statements. For help on
 this type::
 
-  mathics --help
+  mathics3 --help
 
 
 There are more filled-out front ends. ``mathicsscript`` is a more full
 featured command-line script similar to ``wolframscript``. There is a
-Django-based front-end called ``mathics-django``.
+Django-based front-end called ``Mathics3-django``.
 
 There are also two Mathics3 modules written in Python:
 
-* `pymathics-graph`__
+* `Mathics3-Module-networkx`__
 * `Mathics3-Module-nltk`__
 
-.. _pymathics-graph: https://github.com/Mathics3/pymathics-graph/
+.. _Mathics3-Module-networkx: https://github.com/Mathics3/Mathics3-Module-networkx/
 __ pymathics-graph_
 
-For ``mathics-core``, ``mathics-django`` and ``mathics-django``::
+For ``mathics-core``, and ``Mathics3-django``::
 
   $ git clone <name-of-repository>
   $ cd <name-of-repository>
