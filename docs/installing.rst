@@ -36,7 +36,7 @@ OS package dependencies
 +++++++++++++++++++++++
 
 Here we only describe OS package dependencies for Mathics3. For
-front-ends, Mathics-Django or ``mathicsscript``, see "Install from the Mathics3 Github Organization"
+front-ends, ``Mathics-Frontend-django``, ``Mathics3-Frontend-CLI``, ``Mathics3-Frontend-jupyter``, or ``Mathics3-Frontend-live``, see "Install from the Mathics3 Github Organization"
 for specific github repositories.
 
 Debian/Ubuntu
@@ -48,7 +48,7 @@ For Debian/Ubuntu based systems, run
 
     $ sudo apt-get install python-dev libsqlite3-dev python-setuptools liblapack-dev llvm-dev
 
-Note that asymptote version 2.83 or later and ghostscript 9.56.1 or later are required for building PDF documentation, 
+Note that asymptote version 2.83 or later and ghostscript 9.56.1 or later are required for building PDF documentation,
 as stated previously.
 
 MacOSX
@@ -60,7 +60,7 @@ On Mac OS X:
 ::
 
     $ brew install sqlite3
-    $ brew install llvm@18
+    $ brew install llvm@18  # or llvm@19 or llvm@20
 
 Make sure when you install llvmlite to specify the ``LLVM_CONFIG``::
 
@@ -158,7 +158,7 @@ Names given in parentheses correspond to the relevant package ``import`` names i
 
        $ pip install Mathics3-Scanner # Mathics3 scanner and builtin operator definitions
        $ pip install Mathics3  # this is the core engine. It is a dependency of some of the below too
-       $ pip install Mathics3-Django[full] # web front-end with extras
+       $ pip install Mathics3-Frontend-Django[full] # web front-end with extras
        $ pip install mathicsscript[full]  # the command-line interface with extras
        $ pip install Mathics3-Module-nltk # the Natural-language Python module
        $ pip install Mathics3-Module-networkx # the Python module for working with Graphs and Networks
@@ -243,7 +243,7 @@ There are also two Mathics3 modules written directly in Python:
 .. _Mathics3-Module-networkx: https://github.com/Mathics3/Mathics3-Module-networkx/
 __ pymathics-graph_
 
-To build ``mathics-core``, and ``Mathics3-django``::
+To build ``mathics-core``, and ``Mathics3-Frontend-django``::
 
   $ git clone <name-of-repository>
   $ cd <name-of-repository>

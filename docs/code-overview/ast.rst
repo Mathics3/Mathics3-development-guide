@@ -5,7 +5,7 @@ AST, M-Expression, General List: same thing
 ============================================
 
 The end-result of scanning and parsing is an :term:`M-expression`, which is a
-Python object of type ``Expression``. In compiler terminology the
+Python object of type ``Expression``. In non-Lisp-oriented systems and in compiler terminology the
 M-expression is also called an *abstract syntax tree* or AST. The
 first element of an ``Expression`` is called the "head".
 
@@ -57,6 +57,8 @@ kinds of programming language constructs, such as for loops,
 conditional statements, exception blocks, different kinds of
 expressions, and so on. In WL and Mathics3, these are all simply
 built-in functions.
+
+However we do have speicalized certain kinds of lists objects such as non-function List objects.
 
 In the process of Evaluation, described in the next section, more
 kinds of objects over the above the four may get introduced as the

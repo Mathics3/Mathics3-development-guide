@@ -13,9 +13,10 @@ for example a Django-based front end.
 However in order to facilitate using the parts of it in other projects
 or the parts you need, the original package and GitHub repositories
 have been broken up into separately installable packages, and separate
-GitHub repositories. These repositories are now under the Mathics3
-GitHub organization. (The old organization and GitHub repositories are
-around, but you will find no development there.)
+GitHub repositories. These repositories are now under the `Mathics3
+GitHub <https::/github.com/Mathics3`_ organization. (The old
+organization and GitHub repositories are around, but you will find no
+development there.)
 
 Splitting up into packages reduces the dependencies needed for many of
 the individual components: when you only need part of Mathics3 you
@@ -27,7 +28,7 @@ implementation to save worksheet data.
 
 On the other hand, if you are only interested in the Django interface
 and will never use the command-line interface, then you don't need the
-mathicsscript package and the Python terminal packages that pull in.
+``Mathics3-Frontend-CLI`` package and the Python terminal packages that pull in.
 
 Natural-Language Processing (NLP) is a separate Mathics3 module; it
 requires OS package support and word lists that you might not have
@@ -36,7 +37,7 @@ interpreters cannot build the Python NLTK package.
 
 However, if you do want everything, we have a separate package called
 `Mathics-omnibus <https://pypi.org/project/Mathics-omnibus/>`_ which
-pulls in all of the Mathics-related packages. As part of the `GitHub
+pulls in all of the Mathics3-related packages. As part of the `GitHub
 project <https://github.com/Mathics3/mathics-omnibus>`_ is a docker
 setup.
 
@@ -55,12 +56,13 @@ Mathics3 Core
 The Mathics3 Kernel contains a parser, an evaluator, and
 some formatting routines.
 
-Over time, formatting routines may be packaged separately.
+Secific kinds of rendering, e.g., using `matplotlib <https://pypy.org/project/matplotlib>`_ or `svglib <https://pypi.org/project/svglib>`_ are packaged separately.
 
-There is also a very rudimentary command-line shell called ``mathics``.
+There is also a very rudimentary command-line shell called
+``mathics3`` distributed with Mathics3 core..
 
 
-The Mathics3 Kernel is required for any work with Mathics3.
+Mathics3 Core is required for any work with Mathics3.
 
 If you are developing a non-interactive application written in
 Mathics3, you may no more than this.
@@ -105,8 +107,8 @@ Mathicsscript uses this package.
 
 
 
-mathicsscript
--------------
+Mathics3-Frontend-CLI
+---------------------
 
 The Mathics3 core comes with a very rudimentary command-line
 shell, if you want fancier shell features such as:
@@ -126,7 +128,7 @@ Django-based GUI
 
 If you prefer, as many do, browser-based interaction with nicely
 formatted graphics and MathML-formatted output, right now there is a
-Django-based PyPI package `Mathics-Django
+Django-based PyPI package `Mathics-Frontend-django
 <https://pypi.org/project/Mathics-Django>`_.
 
 Some of its features:
