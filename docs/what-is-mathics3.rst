@@ -14,7 +14,7 @@ However in order to facilitate using the parts of it in other projects
 or the parts you need, the original package and GitHub repositories
 have been broken up into separately installable packages, and separate
 GitHub repositories. These repositories are now under the `Mathics3
-GitHub Organization <https::/github.com/Mathics3>`_. The old
+GitHub Organization <https://github.com/Mathics3>`_. The old
 organization and GitHub repositories are around, but you will find no
 development there.
 
@@ -35,11 +35,11 @@ requires OS package support and word lists that you might not have
 installed, and might not want to devote disk space for. Various Python
 interpreters cannot build the Python NLTK package.
 
-However, if you do want everything, we have a separate package called
-`Mathics-omnibus <https://pypi.org/project/Mathics-omnibus/>`_ which
-pulls in all of the Mathics3-related packages.
+However, if you do want everything, we have a separate PYPI package called
+`Mathics3-omnibus <https://pypi.org/project/mathics3-omnibus/>`_ which
+pulls in all of the Mathics3-related packages. The github repository for this is at `here: <https://github.com/Mathics3/Mathics3-omnibus>`_.
 
-Using this, you can use the full `Mathics3 suite via dockerhub
+You can use the full `Mathics3 suite via dockerhub
 <https://hub.docker.com/r/mathicsorg/mathics>`_ without having to
 build Mathics3 or have necessary OS libraries (including Python
 itself) outside of the docker containers.
@@ -126,7 +126,7 @@ shell, if you want fancier shell features such as:
 * Automatic detection of light or dark `terminal background color <https://pypi.org/project/term-background/>`_.
 * Entering and displaying Unicode symbols such as used for Pi or Rule arrows
 
-There is a separately-installable PyPI package called `Mathics3-Frontend-CLI <https://pypi.org/project/mathicsscript/>`_.
+There is a separately-installable PyPI package called `Mathics3-Frontend-CLI <https://pypi.org/project/mathicsscript/>`_. The older name for this is ``mathicsscript``.
 
 There are a number of GUI frontends too which are described next.
 
@@ -154,7 +154,7 @@ much outside activity, so it is likely to be phased out in favor of the Jupyter 
 Jupyter-based Notebook GUI
 ++++++++++++++++++++++++++
 
-There is a `Jupyter <https://jupyter.org/>`_-based notebook frontend called `Mathics-Frontend-jupyter <https://github.com/Mathics3/Mathics3-Frontend-jupyter>`_.
+There is a `Jupyter <https://jupyter.org/>`_-based notebook frontend called `Mathics3-Frontend-jupyter <https://github.com/Mathics3/Mathics3-Frontend-jupyter>`_.
 The PyPI package is `here <https://pypi.org/project/mathics3-jupyter_kernel>`_.
 
 Right now, it is very rudimentary. Please help improve this.
