@@ -136,7 +136,7 @@ Django-based GUI
 If you prefer, as many do, browser-based interaction with nicely
 formatted graphics and MathML-formatted output, right now there is a
 Django-based `Mathics-Frontend-django <https://github.com/Mathics3/Mathics3-Frontend-django>`_. The PyPI package is located
-`here <https://pypi.org/project/Mathics-Django>`_.
+`here <https://pypi.org/project/Mathics3-Django>`_.
 
 Some of its features:
 
