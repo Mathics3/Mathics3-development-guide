@@ -8,7 +8,7 @@ Look at `<https://pypi.org/project/Mathics-django/>`_ and
 `<https://github.com/Mathics3/mathics-django>`_ for broken links and corrections to text.
 .. code::
 
-    $ PACKAGE="Mathics-Django"
+    $ PACKAGE="Mathics3-Frontend-django"
     $ github_top_dir="mathics_django"
     # Edit mathics_django/version.py
     $ source ${github_top_dir}/version.py # to set in POSIX shell
@@ -92,7 +92,7 @@ Go over what is in dist and remove unnecessary files in ``dist``.
 Release Mathics3 Django on Github
 =================================
 
-Go to https://github.com/Mathics3/mathics-django/releases/new
+Go to https://github.com/Mathics3/Mathics3-Frontend-django/releases/new
 
 https://cloudconvert.com/rst-to-md can be used to change the CHANGES.rst
 section to markdown.
@@ -106,7 +106,7 @@ TODO: turn this into a script in ``admin-tools``
 
     $ git pull # to pull down new tag
     $ pushd /tmp/gittest
-    $ pip install -e git+https://github.com/Mathics3/mathics-django.git@${__version__}#egg=${PACKAGE}[full]
+    $ pip install -e git+https://github.com/Mathics3/Mathics-Frontend-django.git@${__version__}#egg=${PACKAGE}[full]
     $ python src/mathics-django/mathics_django/server.py --version # See version
     $ popd
 
@@ -117,10 +117,10 @@ Upload it to PyPI with ``twine``:
 
 .. code::
 
-    $ twine upload --verbose dist/Mathics{_,-}Django-${__version__}*
+    $ twine upload --verbose dist/Mathics3_Frontend_django-${__version__}*
 
-Move Mathics-Django distributed files to uploaded
-=================================================
+Move Mathics3-Frontend-django distributed files to uploaded
+===========================================================
 
 .. code::
 

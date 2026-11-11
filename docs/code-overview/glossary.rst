@@ -63,7 +63,7 @@ Glossary
      :term:`M-expression`.  The base class :ref:`BaseElement Class`
      defines properties that an element of the the expression.
 
-     At any given level of the expression tree described in an S-expression, the
+     At any given level of the expression tree described in an M-expression, the
      head element or first element is a little different in that it
      represents a function or operator. So generally when we refer to
      this kind of element, we will use the more qualified term "head element".
@@ -149,7 +149,16 @@ Glossary
      used in Lisp and functional languages.
 
      While often the head element is a :term:Symbol` in some cases it can be an expression.
-     For example, in ``Derivative[1][f]`` the head element is ``Derivative[1]``
+     For example, in ``Derivative[1][f]`` the head element is ``Derivative[1]``.
+
+     Having the head or function-name specifier take a parameter is
+     useful in mathematics because it allows, say, the first
+     derivative or second derivative to be viewed either its own
+     separate parameterized function, or in the class of generic
+     functions that it belongs to.  For example, a first derivative
+     can then be treated more uniformly both are functions in the class
+     of derivatives, or as its own separate first-derivative function, having first-derivative properties
+     distinct from the derivative class of functions.
 
      The ``Expression`` produced by the parser is an M-expression. In
      evaluation though this pure data structure is transformed and has

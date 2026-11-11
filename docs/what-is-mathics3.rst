@@ -13,9 +13,10 @@ for example a Django-based front end.
 However in order to facilitate using the parts of it in other projects
 or the parts you need, the original package and GitHub repositories
 have been broken up into separately installable packages, and separate
-GitHub repositories. These repositories are now under the Mathics3
-GitHub organization. (The old organization and GitHub repositories are
-around, but you will find no development there.)
+GitHub repositories. These repositories are now under the `Mathics3
+GitHub Organization <https://github.com/Mathics3>`_. The old
+organization and GitHub repositories are around, but you will find no
+development there.
 
 Splitting up into packages reduces the dependencies needed for many of
 the individual components: when you only need part of Mathics3 you
@@ -27,20 +28,18 @@ implementation to save worksheet data.
 
 On the other hand, if you are only interested in the Django interface
 and will never use the command-line interface, then you don't need the
-mathicsscript package and the Python terminal packages that pull in.
+``Mathics3-Frontend-CLI`` package and the Python terminal packages that pull in.
 
-Natural-Language Processing (NLP) is a separate Mathics3 module; it
+Natural-Language Processing (NLP) is a `separate Mathics3 module <https://pypi.org/project/Mathics3-Module-nltk/>`_; it
 requires OS package support and word lists that you might not have
 installed, and might not want to devote disk space for. Various Python
 interpreters cannot build the Python NLTK package.
 
-However, if you do want everything, we have a separate package called
-`Mathics-omnibus <https://pypi.org/project/Mathics-omnibus/>`_ which
-pulls in all of the Mathics-related packages. As part of the `GitHub
-project <https://github.com/Mathics3/mathics-omnibus>`_ is a docker
-setup.
+However, if you do want everything, we have a separate PYPI package called
+`Mathics3-omnibus <https://pypi.org/project/mathics3-omnibus/>`_ which
+pulls in all of the Mathics3-related packages. The github repository for this is at `here: <https://github.com/Mathics3/Mathics3-omnibus>`_.
 
-Using this, you can use the full `Mathics3 suite via dockerhub
+You can use the full `Mathics3 suite via dockerhub
 <https://hub.docker.com/r/mathicsorg/mathics>`_ without having to
 build Mathics3 or have necessary OS libraries (including Python
 itself) outside of the docker containers.
@@ -55,23 +54,25 @@ Mathics3 Core
 The Mathics3 Kernel contains a parser, an evaluator, and
 some formatting routines.
 
-Over time, formatting routines may be packaged separately.
+Specific kinds of rendering, e.g., using `matplotlib <https://pypi.org/project/matplotlib>`_ or `svglib <https://pypi.org/project/svglib>`_ are packaged separately.
 
-There is also a very rudimentary command-line shell called ``mathics``.
+There is also a very rudimentary command-line shell called
+``mathics3`` distributed with Mathics3 core.
 
 
-The Mathics3 Kernel is required for any work with Mathics3.
+Mathics3 Core is required for any work with Mathics3.
 
-If you are developing a non-interactive application written in
-Mathics3, you may no more than this.
+If you are developing in Python and just need to perform Mathematica
+calculations, or are writing a non-interactive application written in
+Mathics3, a Mathematica-compatible language, you may no more than this.
 
 Although we provide documentation `on-line
-<https://mathics.org/docs/mathics-latest.pdf>`_, inside the `docker
-image <https://hub.docker.com/r/mathicsorg/mathics>`_ , and
-extractable from the that, should you want to build your PDF,
-you'll need to have various TeX packages installed.
+<https://mathics.org/docs/mathics-latest.pdf>`_, and inside a `docker
+image <https://hub.docker.com/r/mathicsorg/mathics>`_ that contains
+the documentation, should you want to build your PDF, you'll need to
+have various TeX packages installed.
 
-Front ends Mathics3-Django and mathicsscript use the Mathics3 Kernel.
+Various :ref:`front-end interfaces <frontend-interfaces>` use the Mathics3 Kernel.
 
 Mathics3 Character Tables and Tokenizer
 ---------------------------------------
@@ -101,15 +102,21 @@ The main difference between the two is that the character tables are
 used here. Possibly over time more parts of the scanner will be used
 as well.
 
-Mathicsscript uses this package.
+``Mathics3-Frontend-CLI`` described in the next section uses this package.
 
 
 
-mathicsscript
--------------
+.. _frontend-interfaces:
+
+Front-End Interfaces for Mathics3
+---------------------------------
+
+Richer Command-line Interface (``Mathics3-Frontend-CLI``)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 The Mathics3 core comes with a very rudimentary command-line
 shell, if you want fancier shell features such as:
+
 
 * Prompt toolkit and GNU Readline terminal interaction. This includes
    - saving command history between sessions.
@@ -119,26 +126,48 @@ shell, if you want fancier shell features such as:
 * Automatic detection of light or dark `terminal background color <https://pypi.org/project/term-background/>`_.
 * Entering and displaying Unicode symbols such as used for Pi or Rule arrows
 
-There is a separately-installable PyPI package called `mathicsscript <https://pypi.org/project/mathicsscript/>`_.
+There is a separately-installable PyPI package called `Mathics3-Frontend-CLI <https://pypi.org/project/mathicsscript/>`_. The older name for this is ``mathicsscript``.
+
+There are a number of GUI frontends too which are described next.
 
 Django-based GUI
-----------------
+++++++++++++++++
 
 If you prefer, as many do, browser-based interaction with nicely
 formatted graphics and MathML-formatted output, right now there is a
-Django-based PyPI package `Mathics-Django
-<https://pypi.org/project/Mathics-Django>`_.
+Django-based `Mathics-Frontend-django <https://github.com/Mathics3/Mathics3-Frontend-django>`_. The PyPI package is located
+`here <https://pypi.org/project/Mathics3-Django>`_.
 
 Some of its features:
 
 * Extensive online documentation and interactive documentation via Ajax
 * Integrated graphics and MathML mathematics output via MathJax
-* Notebook-like sessions
+* Notebook-like sessions; this is somewhat homegrown though.
 
 To use this, you will need Django 6.0 or later installed, and a
 browser with JavaScript enabled.
 
-Note: in the future, we intend to also provide a Jupyter-like interface.
+Historically, the Django interface was the richest. There hasn't been
+much outside activity, so it is likely to be phased out in favor of the Jupyter and Jupyterlite interfaces.
+
+
+Jupyter-based Notebook GUI
+++++++++++++++++++++++++++
+
+There is a `Jupyter <https://jupyter.org/>`_-based notebook frontend called `Mathics3-Frontend-jupyter <https://github.com/Mathics3/Mathics3-Frontend-jupyter>`_.
+The PyPI package is `here <https://pypi.org/project/mathics3-jupyter_kernel>`_.
+
+Right now, it is very rudimentary. Please help improve this.
+
+
+Jupyterlite-based Notebook GUI
+++++++++++++++++++++++++++++++
+
+In `Mathics3-Frontend-jupyter
+<https://pypi.org/project/mathics3-jupyter_kernel>`_ we have some rudimentary kernel extensions for JupyterLite. Right now, it is very rudimentary. Please help improve this.
+
+JupyterLite is what powers our the Mathics3 implementation `Mathics3 live <https://mathics3.github.io/Mathics3-Frontend-live/>`_ that runs in the browser only: no Python installation is needed, just a connection to the Internet.
+
 
 Mathics3 Python Modules
 -----------------------
@@ -173,7 +202,7 @@ Here are some reasons you would put something inside a Mathics3 Module instead o
 If the thing you want to add is listed as a Wolfram Language Builtin Function, then it goes in Mathics3 Kernel.
 
 Below we list some of Mathics3 module packages. A full list can be
-found by looking in the `Mathics3 organization
+found by looking in the `Mathics3 Organization
 <https://github.com/Mathics3>`_.
 
 `"Hello, World" as a Mathics3 Python Module <https://github.com/Mathics3/Mathics3-Module-hello>`_
@@ -187,9 +216,10 @@ In contrast to the Mathics3 Modules, this one is not general useful except for s
 `Mathics3 Module ICU <https://github.com/Mathics3/Mathics3-Module-PyICU>`_
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-This Mathics3 Module adds ICU functions via ``PyICU``.
 
-To use `pyicu <https://pypi.org/project/pyicu>`_ needs to be installed.
+This Mathics3 Module adds `ICU <https://icu.unicode.org/#h.i33fakvpjb7o>`_ functions.
+
+To use, `pyicu <https://pypi.org/project/pyicu>`_ needs to be installed.
 
 `Natural Language Mathics3 Module <https://github.com/Mathics3/Mathics3-Module-nltk>`_
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -224,9 +254,11 @@ way.  It provides graphics rendering using the `asymptote
 .. _mathics-pygments: https://pypi.org/project/mathics-pygments/
 
 
-Mathics3 Debugger `<https://github.com/Mathics3/Mathics3-Module-trepan>`_
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Mathics3 Debugger
++++++++++++++++++
 
-Currently this is a work in progress and works only in very limited way.
+Currently the `Mathics3 Debugger
+<https://github.com/Mathics3/Mathics3-Module-trepan>`_ is a work in
+progress and works only in very limited way.
 
 It provides the ability debugging Mathics3 code and the Mathics3 implementation

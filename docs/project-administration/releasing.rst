@@ -29,7 +29,7 @@ Here is a dependency order in which Python packages can be released:
 1. mathics_scanner; no Mathics3 dependencies.
 2. mathics-pygments; depends on mathics_scanner.
 3. Mathics3-Kernel; depends on mathics_scanner; For the docs the Mathics3 modules need to be available.
-4. Mathics-Django; depends on mathics-core.
+4. Mathics3-Frontend-Django; depends on mathics-core.
 5. mathicsscript; depends on mathics-core.
 6. pymathics-graph; depends on mathics-core.
 7. pymathics-natlang; depends on mathics-core.
