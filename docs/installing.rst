@@ -158,7 +158,7 @@ Names given in parentheses correspond to the relevant package ``import`` names i
 
        $ pip install Mathics3-Scanner # Mathics3 scanner and builtin operator definitions
        $ pip install Mathics3  # this is the core engine. It is a dependency of some of the below too
-       $ pip install Mathics3-Frontend-Django[full] # web front-end with extras
+       $ pip install Mathics3-Frontend-django[full] # web front-end with extras
        $ pip install mathicsscript[full]  # the command-line interface with extras
        $ pip install Mathics3-Module-nltk # the Natural-language Python module
        $ pip install Mathics3-Module-networkx # the Python module for working with Graphs and Networks

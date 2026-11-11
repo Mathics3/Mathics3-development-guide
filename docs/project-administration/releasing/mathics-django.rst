@@ -8,7 +8,7 @@ Look at `<https://pypi.org/project/Mathics-django/>`_ and
 `<https://github.com/Mathics3/mathics-django>`_ for broken links and corrections to text.
 .. code::
 
-    $ PACKAGE="Mathics-Django"
+    $ PACKAGE="Mathics3-Frontend-django"
     $ github_top_dir="mathics_django"
     # Edit mathics_django/version.py
     $ source ${github_top_dir}/version.py # to set in POSIX shell
@@ -119,8 +119,8 @@ Upload it to PyPI with ``twine``:
 
     $ twine upload --verbose dist/Mathics{_,-}Django-${__version__}*
 
-Move Mathics-Django distributed files to uploaded
-=================================================
+Move Mathics3-Frontend-django distributed files to uploaded
+===========================================================
 
 .. code::
 

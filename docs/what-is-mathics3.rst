@@ -54,7 +54,7 @@ Mathics3 Core
 The Mathics3 Kernel contains a parser, an evaluator, and
 some formatting routines.
 
-Secific kinds of rendering, e.g., using `matplotlib <https://pypy.org/project/matplotlib>`_ or `svglib <https://pypi.org/project/svglib>`_ are packaged separately.
+Specific kinds of rendering, e.g., using `matplotlib <https://pypi.org/project/matplotlib>`_ or `svglib <https://pypi.org/project/svglib>`_ are packaged separately.
 
 There is also a very rudimentary command-line shell called
 ``mathics3`` distributed with Mathics3 core..
@@ -163,7 +163,7 @@ Jupyterlite-based GUI
 In `Mathics-Frontend-jupyter
 <https://pypi.org/project/mathics3-jupyter_kernel>`_ we have some rudimentary kernel extensions for JupyterLite. Right now, it is very rudimentary. Please help improve this.
 
-JupyterLite is what powers our the Mathics3 implementation `Mathics3 live <https://mathics3.github.io/Mathics3-Frontend-live/>`_ that runs in the browswer only: no Python installation is needed, just a connection to the Internet.
+JupyterLite is what powers our the Mathics3 implementation `Mathics3 live <https://mathics3.github.io/Mathics3-Frontend-live/>`_ that runs in the browser only: no Python installation is needed, just a connection to the Internet.
 
 
 Mathics3 Python Modules
