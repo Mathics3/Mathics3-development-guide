@@ -39,6 +39,7 @@ Each of the above steps can be involved, so we break these down below.
    code-overview/rule-and-element-order
    code-overview/precision-and-accuracy
    code-overview/boxes-forms-and-formats
+   code-overview/formatting
    code-overview/python-modules
    code-overview/object-classes
    code-overview/glossary
