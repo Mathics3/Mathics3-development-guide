@@ -58,7 +58,7 @@ conditional statements, exception blocks, different kinds of
 expressions, and so on. In WL and Mathics3, these are all simply
 built-in functions.
 
-However we do have speicalized certain kinds of lists objects such as non-function List objects.
+However we do have specialized certain kinds of list objects such as non-function List objects.
 
 In the process of Evaluation, described in the next section, more
 kinds of objects beyond the four may get introduced as the

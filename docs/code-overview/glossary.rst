@@ -151,12 +151,12 @@ Glossary
      While often the head element is a :term:Symbol` in some cases it can be an expression.
      For example, in ``Derivative[1][f]`` the head element is ``Derivative[1]``.
 
-     Having the head or function-name specifier take a parmeter is
+     Having the head or function-name specifier take a parameter is
      useful in mathematics because it allows, say, the first
      derivative or second derivative to be viewed either its own
      separate parameterized function, or in the class of generic
      functions that it belongs to.  For example, a first derivative
-     can then be treated more uniformly both a functions in the class
+     can then be treated more uniformly both are functions in the class
      of derivatives, or as its own separate first-derivative function, having first-derivative properties
      distinct from the derivative class of functions.
 

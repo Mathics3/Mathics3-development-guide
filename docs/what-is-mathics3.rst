@@ -57,7 +57,7 @@ some formatting routines.
 Specific kinds of rendering, e.g., using `matplotlib <https://pypi.org/project/matplotlib>`_ or `svglib <https://pypi.org/project/svglib>`_ are packaged separately.
 
 There is also a very rudimentary command-line shell called
-``mathics3`` distributed with Mathics3 core..
+``mathics3`` distributed with Mathics3 core.
 
 
 Mathics3 Core is required for any work with Mathics3.
